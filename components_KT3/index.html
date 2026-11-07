@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Карточки с контентом</title>
+  <link rel="stylesheet" href="card-component.css" />
+  <script src="card-component.js" defer></script>
+</head>
+<body>
+    <div class="cards-row">
+        <card-component>
+            <template slot="header">
+                <h2>Что такое веб-компоненты?</h2>
+            </template>
+            <template slot="content">
+                <p>
+                    Веб-компоненты — это набор технологий, позволяющих создавать
+                    переиспользуемые элементы с собственной разметкой, стилями
+                    и поведением.
+                </p>
+            </template>
+        </card-component>
+
+        <card-component>
+            <template slot="header">
+                <h2>Кот дня</h2>
+            </template>
+            <template slot="content">
+                <p>
+                    Этот кот умеет открывать холодильник. Хозяева сдались
+                    и поставили детский замок.
+                </p>
+                <img src="/images.jfif" alt="кот" />
+            </template>
+
+        </card-component>
+
+        <card-component>
+            <template slot="header">
+                <h2>Факт дня</h2>
+            </template>
+            <template slot="content">
+                <p>
+                    Мёд не портится. Археологи находили банки мёда
+                    в гробницах возрастом 3 000 лет — и он оставался съедобным.
+                </p>
+            </template>
+
+            <template slot="footer">
+                <span>Рубрика: «Химия на кухне»</span>
+            </template>
+        </card-component>
+
+    </div>
+</body>
+</html>
