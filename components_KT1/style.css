@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #1f2937;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+#contacts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Стили карточки */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
+}
+
+.contact-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e2e8f0;
+  flex-shrink: 0;
+  border: 3px solid #e0e7ff;
+}
+
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.contact-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.contact-email,
+.contact-phone {
+  font-size: 0.9rem;
+  color: #475569;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.15s ease;
+}
+
+.contact-email:hover,
+.contact-phone:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.contact-email::before {
+  content: "✉ ";
+}
+
+.contact-phone::before {
+  content: "☎ ";
+}
